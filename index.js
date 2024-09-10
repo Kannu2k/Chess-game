@@ -179,7 +179,24 @@ function switchColors(selectedPiece) {
 function capturePiece(piece) {
     const p1 = piece.parentNode;
     p1.removeChild(piece);
+    
     p1.appendChild(selectedPiece);
+
+    if(piece.classList[1]==='king')
+    {
+        
+        if(piece.classList[0]==='white')
+        setTimeout(()=>{alert('black has won')
+        location.reload()},500);
+        else
+        setTimeout(()=>{alert('white has won')
+        location.reload()},500);
+
+        
+
+
+    }
+
 }
 
 function returntoSquare() {
